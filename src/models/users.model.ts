@@ -11,6 +11,18 @@ const userSchema: Schema = new Schema({
     type: String,
     required: true,
   },
+  first_name: {
+    type: String,
+    required: true,
+  },
+  last_name: {
+    type: String,
+    required: true,
+  },
+  organizations: {
+    type: [String],
+    required: true,
+  },
 });
 
 const userModel = model<User & Document>('User', userSchema);
